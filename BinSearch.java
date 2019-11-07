@@ -1,10 +1,10 @@
-package binSearch;
+//package binSearch; this is the package name I used
 import java.util.Scanner;
 
 /**
  * 
- * This Algorithm sorts the command line input, then proceeds with the binary search ("Jacked from the Internet")
- * The input is take from the command line so user must go over to run configurations -> arguments -> program arguments
+ * This Algorithm sorts the command line input, then proceeds with the binary search
+ * The input is take from the command line so user must go over to run configurations -> arguments -> program arguments (In a Eclipse environment)
  */
 
 
@@ -37,7 +37,7 @@ public class BinSearch {
 		input.close();
 		
 		int result = binarySearch(a, 0, a.length - 1, b);
-		if(result != -1) System.out.println("The element " + b +" was found at the index " + result);
+		if(result != -1) System.out.println("The element " + b +" was found at the index " + result); //If the get -1 from the method the element was not found
 		else System.out.println("The element was not found");
 	}
 	
