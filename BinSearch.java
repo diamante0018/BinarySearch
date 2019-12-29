@@ -1,4 +1,3 @@
-//package binSearch; this is the package name I used
 import java.util.Scanner;
 
 /**
@@ -37,12 +36,15 @@ public class BinSearch {
 		input.close();
 		
 		int result = binarySearch(a, 0, a.length - 1, b);
-		if(result != -1) System.out.println("The element " + b +" was found at the index " + result); //If the get -1 from the method the element was not found
-		else System.out.println("The element was not found");
+		if(result != -1) 
+			System.out.println("The element " + b +" was found at the index " + result); //If the get -1 from the method the element was not found
+		else 
+			System.out.println("The element was not found");
 	}
 	
 	public static  boolean isSorted(Integer[] b) {
-		if (b.length<=1) return true;
+		if (b.length<=1) 
+			return true;
 		
 		for (int l=0;l<b.length-1;l++) {
 			if (b[l]>b[l+1]) {
@@ -57,7 +59,8 @@ public class BinSearch {
 	        for (int k=0;k<h.length;k++) {
 	            minptr = k;
 	            for (int j=(k+1);j<=h.length-1;j++) {
-	                if (h[j]<h[minptr]) minptr = j;
+	                if (h[j]<h[minptr]) 
+				minptr = j;
 	            }
 	            temp = h[k];
 	            h[k] = h[minptr];
@@ -70,24 +73,15 @@ public class BinSearch {
     { 
         if (r >= l) { 
             int mid = l + (r - l) / 2; 
-  
-            // If the element is present at the 
-            // middle itself 
+   
             if (arr[mid] == x) 
                 return mid; 
-  
-            // If element is smaller than mid, then 
-            // it can only be present in left subarray 
+   
             if (arr[mid] > x) 
                 return binarySearch(arr, l, mid - 1, x); 
   
-            // Else the element can only be present 
-            // in right subarray 
             return binarySearch(arr, mid + 1, r, x); 
         } 
-  
-        // We reach here when element is not present 
-        // in array 
         return -1; 
     } 
 }
