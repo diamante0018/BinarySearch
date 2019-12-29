@@ -40,8 +40,6 @@ int main(int argc, char *argv[]) {
 	else
 		printf("The item %d was not found\n", x);
 
-
-	std::cin.get();
 }
 
 
